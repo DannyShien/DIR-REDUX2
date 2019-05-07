@@ -5,7 +5,7 @@ function PokeList({cards}) {
 
     const cardItems = cards.map(card => {
         return (
-            <li>{cards.name}</li>
+            <li>{card.name}</li>
         )
     })
 
