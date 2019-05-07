@@ -97,17 +97,17 @@ function visibility(state=initialState.visibiiltyFilter, action={type:''}) {
     switch(action.type) {
         case ACTION_VISIBILITY_ALL:
             return VISIBILITY_ALL;
-        break;
+        // break;
         case ACTION_VISIBILITY_CAUGHT: 
             return VISIBILITY_CAUGHT;
-        break; 
+        // break; 
         case ACTION_VISIBILITY_UNCAUGHT: 
             return VISIBILITY_UNCAUGHT;
-        break;
+        // break;
 
         default: 
             return state;
-        break;
+        // break;
     }
 }
 //  this is where you are assigning responsibility of one piece of state and one reducer.
