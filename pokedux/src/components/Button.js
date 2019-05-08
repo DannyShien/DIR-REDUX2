@@ -1,15 +1,13 @@
 import React from 'react'; 
 
-function Button({handleClick}) {
+function Button({handleAll, handleCaught, handleUncaught}) {
     return (
-        <button
-            onClick={handleClick}
-        >
-            {label}
-        </button>
-    )
-};
-
-
+        <>    
+            <button onClick={handleAll}>ALL</button>
+            <button onClick={handleCaught}>CAUGHT</button>
+            <button onClick={handleUncaught}>UNCAUGHT</button>
+        </>    
+    );
+}
 
 export default Button;
