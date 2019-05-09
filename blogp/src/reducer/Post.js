@@ -1,4 +1,4 @@
-import { ACTION_CREATE_POST } from '../Action'
+import { ACTION_CREATE_POST, ACTION_DELETE_POST } from '../Action'
 
 import { generateId } from '../Utility';
 // A reducer is a function that accepts the current state and an action. 
@@ -20,6 +20,13 @@ export default function Post(state={}, action={type: ''}) {
             // to get the equivalent result, you can use the familiar assignment syntax: 
             // newState[id] = action.payload;
             return newState;
+        break;
+        case ACTION_DELETE_POST:
+            const deleteState = {
+                ...state,
+            }
+            delete deleteState[action.payload.id];
+            return deleteState;
         break;
         default: 
             return state;

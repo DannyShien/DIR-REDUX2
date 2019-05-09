@@ -23,7 +23,12 @@ export function updatePost() {
 
 }
 
-export function deletePost() {
-
+export function deletePost(id) {
+    return {
+        type: ACTION_DELETE_POST, 
+        payload: {
+            
+        }
+    }
 
 }
