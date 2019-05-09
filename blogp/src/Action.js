@@ -16,19 +16,27 @@ export function createPost(payload) {
         payload
     };
 }
+// setup (window.) to use in console
 window.createPost = createPost;
 
 
-export function updatePost() {
-
+export function updatePost(id, payload) {
+    return {
+        type: ACTION_UPDATE_POST, 
+        payload: {
+            id, 
+            ...payload
+        }
+    };
 }
+window.updatePost = updatePost;
 
 export function deletePost(id) {
     return {
         type: ACTION_DELETE_POST, 
         payload: {
-            
+            id
         }
-    }
-
+    };
 }
+window.deletePost = deletePost;
